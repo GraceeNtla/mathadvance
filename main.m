@@ -1,23 +1,32 @@
-% gen
-target = 'grace'
-panjang = length(target);
-genes = create_genes(panjang)
+% % gen
+% target = 'grace'
+% panjang = length(target);
+% genes = create_genes(panjang)
+ 
+% % fitnes
+% fitnes = calculate_fitnes(genes,target)
+ 
+% % Populasi
+% population_size = 10;
+% population = create_population(target,population_size)
 
+% % Selection
+% [parent1, parent2] = selection(population)
 
-% fitnes
-fitnes = calculate_fitnes(genes,target)
+% % crossover
+% [child1,child2] = crossover(parent1,parent2)
 
-% Populasi
-population_size = 10;
-population = create_population(target,population_size)
+% %  Mutation
+% mutation_rate = 0.5;
+% mutant1 = mutation(child1,mutation_rate)
+% mutant2 = mutation(child2,mutation_rate)
 
-% Selection
-[parent1, parent2] = selection(population)
+% % Regeneration
+% children = [mutant1 mutant2];
+% population = regeneration(children,population)
 
-% crossover
-[child1,child2] = crossover(parent1,parent2)
+target = input('target (string): ','s');
+jumlah_populasi = input('jumlah populasi (integer) : ');
+mutation_rate = input ('mutation rate (0-1) : ');
 
-%  Mutation
-mutation_rate = 0.5;
-mutant1 = mutation(child1,mutation_rate)
-mutant2 = mutation(child2,mutation_rate)
+GA(target,jumlah_populasi,mutation_rate);
